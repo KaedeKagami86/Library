@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        <span class="title">My Library</span>
+        <button id="newBook">Add Book</button>
+    </div>
+
+    <div id="grid-container">
+    </div>
+
+    <div id="form"> <!-- container -->
+        <form id="actualform" required> <!-- usually we put action="" and method="post" or the other one when we actually 
+            have a database but for now we don't, we are just using js with the input value-->
+            <button style="font-weight: bold" id="close">X</button>
+            <fieldset>
+                <legend>Book Information</legend>
+                <div class="form-group">
+                    <label for="title">Book Title: </label>
+                    <input type="text" id="titlebox" name="title" placeholder="Harry Potter 1">
+                </div>
+                <!-- We use "name" here as it is an attribute of the element,
+                     which we can use to select the object with jQuery -->
+                <!-- Name attribute makes backend recognize that input -->
+                <div class="form-group">
+                    <label for="author">Author: </label>
+                    <input type="text" id="authorbox" name="author" placeholder="J. K. Rowling"/>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year: </label>
+                    <input type="number" id="yearbox" name="year" placeholder="1997">
+                </div>
+                <!-- You can use drop down selections too, called "select"
+                 and you can use optgroups to group options! -->
+                <div class="form-group">
+                    <label for="type">Book Type: </label>
+                    <div>
+                        <input id="checkbox0" type="checkbox" id="Fantasy" name="type" value="Fantasy">
+                        <label for="Fantasy">Fantasy</label>
+
+                        <input id="checkbox1" type="checkbox" id="Sci-fi" name="type" value="Sci-fi">
+                        <label for="Fantasy">Sci-fi</label>
+                    </div>
+                    <div>
+                        <input id="checkbox2" type="checkbox" id="Romance" name="type" value="Romance">
+                        <label for="Romance">Romance</label>
+                        <input id="checkbox3" type="checkbox" id="Comedy" name="type" value="Comedy">
+                        <label for="Comedy">Comedy</label>
+                    </div>
+                    <div>
+                        <input id="checkbox4" type="checkbox" id="Horror" name="type" value="Horror">
+                        <label for="Horror">Horror</label>
+                        <input id="checkbox5" type="checkbox" id="Mystery" name="type" value="Mystery">
+                        <label for="Mystery">Mystery</label>
+                    </div>
+                    <div>
+                        <input id="checkbox6" type="checkbox" id="Non-fiction" name="type" value="Non-fiction">
+                        <label for="Non-fiction">Non-fiction</label>
+                        <input id="checkbox7" type="checkbox" id="Others" name="type" value="Others">
+                        <label for="Others">Others</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Have you read the book?</legend>
+                <div class="form-group">
+                    <div>
+                        <input type="radio" name="readORnot" id="yes" value="true" checked>
+                        <label for="readORnot">Yes</label>
+                        <input type="radio" name="readORnot" id="no" value="false">
+                        <label for="readORnot">No</label>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- checkboxes is another alternative than radio buttons,
+             user can select multiple options from checkboxes -->
+            <!-- you put "checked" in the end to make its default as checked! -->
+            <!-- "fieldset" groups form inputs -->
+            <button type="submit" id="submitbutton" style="background-color: black; color: white">Submit</button>
+            <button type="reset" id="resetbutton" style="background-color: black; color: white">Reset</button>
+        </form>
+
+    </div>
+</body>
+</html>

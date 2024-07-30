@@ -1,0 +1,101 @@
+html {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(122, 64, 5);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 35px;
+  color: white;
+}
+
+#newBook {
+  font-size: 25px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: rgb(27, 25, 25);
+  color: white;
+}
+
+button {
+  border-radius: 8px;
+  /* background-color: rgba(0, 0, 0, 0.849); */
+  /* color: black; */
+}
+
+#grid-container {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 180px 180px 180px 180px 180px;
+  /* each number stands for a column/row */
+  grid-template-rows: 200px 200px;
+  /* or grid-template: 50px / 50px; */
+
+  /* You don't have to define every track as when we have new items that
+  exceed the explicitly defined tracks, it implicitly defines new grid tracks */
+  /* Though we don't need to define more rows by ourselves, it is better
+   to define those implicit tracks to make sure all new items get into the grid: */
+  
+  grid-auto-rows: 200px;
+
+  justify-content: center;
+
+   /* If we wanted to add new things horizontally, like new columns, we could use
+   grid-auto-flow: column, or grid-auto-columns */
+}
+
+/* The form container, not actual form: */
+#form { 
+  /* text-align: left; this is default */
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  width: 400px;
+  height: 5;
+  /* z-index: 99; */
+  margin-left: -200px;
+  padding: 0px;
+  background-color: rgb(162, 138, 118);
+  font-size: 20px;
+  color: white;
+  border-radius: 4px;
+
+  /* Questions: how to center the form even with diff window size 
+  and how do we style the form?? */
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  /* font-weight: bold; */
+  font-weight: bold;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.book {
+  width: 150px;
+  height: 160px;
+  border: 7px solid black;
+  border-radius: 13px;
+}
+
+.statusToggle {
+  background-color: white;
+  
+}
+
+/* When you apply display: flex to a parent container, it becomes a flex container, 
+and its children become flex items. By default, flex items are laid out in a row, 
+aligning them horizontally. This behavior is due to the default value of the 
+flex-direction property, which is row. Hence, if you apply flex to the book containers,
+the p elements will be stacked besides each other rather than vertically on top of 
+each other.*/
